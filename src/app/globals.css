@@ -88,3 +88,14 @@ html,body{max-width:100%;overflow-x:clip}
 }
 @media(max-width:390px){.premium-hero-content{padding-inline:5%}.premium-hero h1{font-size:clamp(47px,12.5vw,60px)!important}.premium-hero .hero-buttons{align-items:flex-start;flex-direction:column}.premium-closing h2{font-size:50px!important}}
 @media(prefers-reduced-motion:reduce){.premium-hero-image{animation:none!important}}
+
+/* V4: branded footer credit, no oversized watermark, keep hero copy above image overlays */
+.footer-credit{display:inline-flex;align-items:center;gap:5px;flex-wrap:wrap}
+.footer-credit a{display:inline-flex;align-items:center;gap:5px;color:#eee9dc;text-decoration:none;border-bottom:1px solid rgba(201,164,106,.6);padding-bottom:3px;transition:color .25s,border-color .25s}
+.footer-credit a:hover{color:#c9a46a;border-color:#c9a46a}
+.footer-bottom{align-items:center;flex-wrap:wrap}
+.premium-hero-content{z-index:5}
+.premium-hero .premium-hero-shade{z-index:1;pointer-events:none}
+.premium-hero .premium-hero-image{z-index:0}
+.premium-hero .hero-eyebrow,.premium-hero h1,.premium-hero-content p,.premium-hero .hero-buttons{position:relative;z-index:5}
+@media(max-width:767px){.premium-hero-content{z-index:5!important}.footer-bottom{align-items:flex-start;gap:18px}}
