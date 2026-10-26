@@ -6,7 +6,7 @@ import {AnimatePresence,motion} from 'motion/react';
 import {useStore} from './StoreProvider';
 import {products} from '@/data/products';
 import Image from 'next/image';
-const links=[['Shop','/shop'],['Collections','/shop#collections'],['Our story','/#story']];
+const links=[['Shop','/shop'],['Collections','/shop'],['Our story','/#story']];
 export function Header(){const [menu,setMenu]=useState(false),[scrolled,setScrolled]=useState(false),[search,setSearch]=useState(false),[q,setQ]=useState('');const {count,cart,remove,cartOpen,setCartOpen}=useStore();
  useEffect(()=>{const fn=()=>setScrolled(window.scrollY>40);fn();window.addEventListener('scroll',fn,{passive:true});return()=>window.removeEventListener('scroll',fn)},[]);
  return <><div className="announcement">ROOTED IN NATURE <span>✳</span> HANDMADE IN SRI LANKA</div><header className={'site-header '+(scrolled?'scrolled':'')}><div className="header-inner"><div className="desktop-links">{links.map(([name,url])=><Link key={name} href={url}>{name}</Link>)}</div><button className="icon-button mobile-only" aria-label="Open menu" onClick={()=>setMenu(true)}><Menu size={23}/></button><Link href="/" className="brand" aria-label="Eden Eco Diary home"><span>EDEN</span><small>ECO DIARY</small></Link><div className="header-actions"><button className="icon-button" aria-label="Search products" onClick={()=>setSearch(true)}><Search size={19}/></button><Link className="icon-button hide-small" href="/wishlist" aria-label="Wishlist"><Heart size={19}/></Link><button className="icon-button bag-button" aria-label={`Open bag with ${count} items`} onClick={()=>setCartOpen(true)}><ShoppingBag size={19}/>{count>0&&<i>{count}</i>}</button></div></div></header>

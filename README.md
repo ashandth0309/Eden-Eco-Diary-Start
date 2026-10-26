@@ -43,3 +43,25 @@ Create a new GitHub repository, commit the project, connect that repository to V
 ## Visual design
 
 Forest green and warm ivory, botanical typography, cinematic Sri Lankan rainforest campaigns, accessible responsive shop components and reduced-motion support.
+
+
+## Premium V2 changes
+
+- Added `Atmosphere` client component for a tasteful scroll-progress indicator and pointer ambience on desktop.
+- Improved editorial hover, dark/light visual continuity, responsive hero spacing, and reduced-motion support.
+- Corrected homepage story navigation and non-existent collections anchor.
+- Original item images remain in `public/images/products`; AI imagery is restricted to editorial campaigns.
+
+### Build status
+Dependency installation could not finish in the authoring environment. Run `npm install`, `npm run typecheck`, `npm run lint`, and `npm run build` locally before deploying.
+
+### GitHub
+The GitHub connector returned HTTP 404 for `ashandth0309/Eden-Eco-Diary-Start`, so these changes were **not pushed**. To commit locally after cloning or extracting, use `git add .`, `git commit -m "Improve Eden cinematic storefront"`, then `git push -u origin <your-branch>`.
+
+## V3 mobile image cropping fixes
+- Hero banner uses natural 16:9 aspect ratio on phones rather than filling a portrait viewport.
+- Homepage hero copy is moved under the image on phones, with comfortable spacing.
+- Lookbook, island story, craft and category images use `object-fit: contain` in correctly sized mobile frames to preserve their full compositions.
+- Closing banner uses an uncropped 16:9 image with the call to action beneath it.
+- Updated typography and overflow rules for 360px–430px mobile widths.
+- Note: letterboxing/background space is intentional: avoiding image crop is prioritized over edge-to-edge fill.
