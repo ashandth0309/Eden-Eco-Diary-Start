@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';import {Cormorant_Garamond,Manrope} from 'next/font/google';import './globals.css';import {Header} from '@/components/Header';import {StoreProvider} from '@/components/StoreProvider';import {Footer} from '@/components/Footer';
+const serif=Cormorant_Garamond({subsets:['latin'],weight:['400','500','600','700'],style:['normal','italic'],variable:'--font-serif',display:'swap'});
+const sans=Manrope({subsets:['latin'],variable:'--font-sans',display:'swap'});
+export const metadata:Metadata={title:{default:'Eden Eco Diary | Nature, Worn Beautifully',template:'%s | Eden Eco Diary'},description:'Discover nature-inspired handmade jewellery from Sri Lanka. Explore the Eden Eco Diary collection.',openGraph:{title:'Eden Eco Diary',description:'Rooted in nature. Crafted in Sri Lanka.',type:'website'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body className={`${serif.variable} ${sans.variable}`}><StoreProvider><Header/>{children}<Footer/></StoreProvider></body></html>}
