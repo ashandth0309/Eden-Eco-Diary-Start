@@ -92,7 +92,7 @@ export default function Home() {
         <div className="premium-hero-content cinematic-copy eden-hero-copy">
           <span className="eyebrow hero-eyebrow"><span className="gold-line" /> A LOVE LETTER TO SRI LANKA</span>
           <h1 id="eden-hero-title">Nature,<br /><em>worn</em><br />beautifully.</h1>
-          <p>Born from an island of extraordinary beauty. Discover handcrafted coconut-shell adornments inspired by nature's most expressive forms.</p>
+          <p>Born from an island of extraordinary beauty. Discover handcrafted coconut-shell adornments inspired by nature&apos;s most expressive forms.</p>
           <div className="hero-buttons">
             <Link className="btn btn-gold" href="/shop">Discover the collection <ArrowUpRight size={17} aria-hidden="true" /></Link>
             <Link className="text-link light" href="/#story">Our story <ArrowRight size={17} aria-hidden="true" /></Link>
